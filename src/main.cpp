@@ -23,7 +23,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 int xPosition = 0;
 int yPosition = 0;
 int moveSpeed = 1;
-int moveDirection = 1;
+int moveDirection = 1; // initial right direction
 
 void displayTime(int xPos, int yPos, int hour, int minutes, int seconds);
 void keypadMoveStep(void);
