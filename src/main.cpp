@@ -193,7 +193,7 @@ void keypadMoveStep(void)
     yPosition-=4;
     break;
 
-  case('A'): //right right
+  case('A'): //right 
     yPosition+=4;
     break;
 }
