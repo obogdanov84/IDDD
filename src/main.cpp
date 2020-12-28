@@ -6,6 +6,14 @@
 #include <Melopero_RV3028.h>
 #include "Keypad.h"
 #include <I2C_eeprom.h>
+#include "IDDE.hpp"
+
+// ----------------EEPROM Memory structure setup--------------
+uint8_t sessionCount = 3;
+uint8_t sessionID = SESSION_1;
+
+
+
 
 Melopero_RV3028 rtc;
 
@@ -33,7 +41,7 @@ void keypadMoveStep(void);
 #define DISPLAY_HEX
 #define BLOCK_TO_LENGTH 16
 
-#define MEMORY_SIZE 0x2000 //total bytes can be accessed 24LC64 = 0x2000 (maximum address = 0x1FFF)
+//#define MEMORY_SIZE 0x2000 //total bytes can be accessed 24LC64 = 0x2000 (maximum address = 0x1FFF)
 
 I2C_eeprom ee(0x50, MEMORY_SIZE);
 
